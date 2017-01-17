@@ -1,9 +1,9 @@
 package org.usfirst.frc.team5829.robot;
 
-import org.usfirst.frc.team1114.robot.commands.*;
+//import org.usfirst.frc.team5829.robot.commands.*;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
-//import org.usfirst.frc.team1114.robot.commands.ExampleCommand;
+//import org.usfirst.frc.team5829.robot.commands.AutonAutoShoot;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 
 /**
@@ -64,7 +64,7 @@ public class OI {
 	
 	public OI(){
 
-		btnX.toggleWhenPressed(new JSCheesyDrive());
+		/*btnX.toggleWhenPressed(new JSCheesyDrive());
 		btnX.toggleWhenPressed(new FlippedJSCheesyDrive());
 		
 		btnY.whileHeld(new Shoot(200));
@@ -90,7 +90,7 @@ public class OI {
 		btn2Start.whileHeld(new ExtendTapeMeasure(-1));
 		btn2Back.whileHeld(new ExtendTapeMeasure(11));
 		btn2Back.whileHeld(new WinchReel(1));
-
+*/
 			
 	}
 }
