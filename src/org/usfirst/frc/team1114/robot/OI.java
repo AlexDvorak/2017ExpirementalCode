@@ -14,7 +14,7 @@ import edu.wpi.first.wpilibj.buttons.JoystickButton;
  */
 public class OI {
 	public Joystick xbox = new Joystick(0);
-	public Joystick xbox2 = new Joystick(1);
+	//public Joystick xbox2 = new Joystick(1);
 	Button btnA = new JoystickButton(xbox, 1);
 	Button btnB = new JoystickButton(xbox, 2);
 	Button btnX = new JoystickButton(xbox, 3);
