@@ -8,12 +8,10 @@ package org.usfirst.frc.team1114.robot;
  */
 public class RobotMap {
     public static int leftFrontMotor = 2;
-    public static int rightFrontMotor = 1;
+    public static int rightFrontMotor = 3;
     public static int leftBackMotor = 4;
-    public static int rightBackMotor = 3;
-    public static int shooterMotorOne = 5; //RightSide1
+    public static int rightBackMotor = 1;
+    public static int shooterMotorOne = 7; //RightSide1
     public static int shooterMotorTwo = 6;  //RightSide2
-    public static int shooterMotorThree = 7; //LeftSide1
-    public static int shooterMotorFour = 8; //LeftSide2
     public static int intakeMotor = 9;
 }

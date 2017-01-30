@@ -16,6 +16,7 @@ import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import edu.wpi.first.wpilibj.networktables.NetworkTable;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -32,23 +33,30 @@ public class Robot extends IterativeRobot {
 	public static OI oi;
 	public static AHRS navx = new AHRS(SerialPort.Port.kMXP);
 	public static Preferences prefs;
+	public static NetworkTable table;
+	
 
 	Command autonomousCommand;
 	SendableChooser<Integer> num = new SendableChooser<Integer>();
 	double[] sxs = {
-		-0,
-		-162,
-		-48,
-		48,
+		0,
 		162,
+		48,
+		-48,
+		-162,
 		0
 	};
 	public static double sx;
-	public static double worldScale = 1; // navx units * worldScale = inches
+	public static double worldScale = 39.4; // navx units * worldScale = inches
 	/**
 	 * This function is run when the robot is first started up and should be
 	 * used for any initialization code.
 	 */
+	double boxX;
+	double boxY;
+	double boxA;
+	double imgH;
+	double imgW;
 
 	public void robotInit() {
 		oi = new OI();
@@ -60,6 +68,7 @@ public class Robot extends IterativeRobot {
 		num.addObject("BlueMiddle",5);
 		num.addObject("BlueRight",6);
 		SmartDashboard.putData("Auto mode", num);
+		table = NetworkTable.getTable("Vision");
 	}
 
 	/**
@@ -117,12 +126,9 @@ public class Robot extends IterativeRobot {
 	
 
 	public void teleopInit() {
-		// This makes sure that the autonomous stops running when
-		// teleop starts running. If you want the autonomous to
-		// continue until interrupted by another command, remove
-		// this line or comment it out.
 		if (autonomousCommand != null)
 			autonomousCommand.cancel();
+		
 	}
 
 	/**

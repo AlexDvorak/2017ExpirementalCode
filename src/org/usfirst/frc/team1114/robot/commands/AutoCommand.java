@@ -23,35 +23,41 @@ public class AutoCommand extends CommandGroup {
     }
     void AutoRM() {
     	addSequential(new Help(true,50));
+    	
     	addSequential(new Help(true,-25));
-    	addSequential(new Help(false,120));
-    	addSequential(new Help(true,-199));
     	addSequential(new Help(false,-30));
-    	addSequential(new Help(true,-50));
+    	addSequential(new Help(true,199));
+    	addSequential(new Help(false,-60));
+    	addSequential(new Help(true,50));
     }
     void AutoRR() {
     	addSequential(new Help(true,51));
     	addSequential(new Help(false,-60));
+    	
     	addSequential(new Help(true,98));
+    	
     	addSequential(new Help(true,-30));
-    	addSequential(new Help(false,-30));
+    	addSequential(new Help(false,150));
     	addSequential(new Help(true,-92));
     }
     void AutoBL() {
     	addSequential(new Help(true,51));
     	addSequential(new Help(false,60));
+    	
     	addSequential(new Help(true,98));
+    	
     	addSequential(new Help(true,-30));
-    	addSequential(new Help(false,30));
+    	addSequential(new Help(false,-150));
     	addSequential(new Help(true,-92));
     }
     void AutoBM() {
     	addSequential(new Help(true,50));
+    	
     	addSequential(new Help(true,-25));
-    	addSequential(new Help(false,-120));
-    	addSequential(new Help(true,-199));
     	addSequential(new Help(false,30));
-    	addSequential(new Help(true,-50));
+    	addSequential(new Help(true,199));
+    	addSequential(new Help(false,60));
+    	addSequential(new Help(true,50));
     }
     void AutoBR() {
     	

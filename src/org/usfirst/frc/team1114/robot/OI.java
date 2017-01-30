@@ -41,8 +41,10 @@ public class OI {
 	*/
 	
 	public OI() {
-		btnB.whenPressed(new Aim());
-		//btnA.whenPressed(new Shoot());
-		//new DriveCommand();
+		btnX.whenPressed(new Aim(true));
+		btnY.whenPressed(new Aim(false));
+		btnA.whenPressed(new Shoot(true));
+		btnB.whenPressed(new Shoot(false));
+		new DriveCommand();
 	}
 }

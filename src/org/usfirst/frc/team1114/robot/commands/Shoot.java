@@ -9,15 +9,18 @@ import edu.wpi.first.wpilibj.command.Command;
  */
 public class Shoot extends Command {
 
-    public Shoot() {
+	private boolean shooting = false;
+	
+    public Shoot(boolean x) {
         requires(Robot.shooter);
+        shooting = x;
     }
 
     protected void initialize() {
     }
 
     protected void execute() {
-    	Robot.shooter.toggleShoot();
+    	Robot.shooter.toggleShoot(shooting);
     }
 
     protected boolean isFinished() {

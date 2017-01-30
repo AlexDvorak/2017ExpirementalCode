@@ -2,7 +2,6 @@ package org.usfirst.frc.team1114.robot.subsystems;
 
 import org.usfirst.frc.team1114.robot.Robot;
 import org.usfirst.frc.team1114.robot.RobotMap;
-import org.usfirst.frc.team1114.robot.commands.DriveCommand;
 
 import com.ctre.CANTalon;
 
@@ -102,6 +101,6 @@ public class Drive extends Subsystem {
     }
 
     public void initDefaultCommand() {
-        setDefaultCommand(new DriveCommand());
+        
     }
 }
