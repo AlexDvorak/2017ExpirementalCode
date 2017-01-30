@@ -125,6 +125,7 @@ public class Shooter extends Subsystem {
 			}
 			Timer.delay(.1);
 		}
+		SmartDashboard.putNumber("TargetSize", s);
 	}
 	public void toggleShoot(boolean sh) {
 		if (sh) {
