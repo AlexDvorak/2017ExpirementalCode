@@ -19,8 +19,8 @@ public class Drive extends Subsystem {
 	CANTalon br = new CANTalon(RobotMap.rightBackMotor);
 	
 	public void drive(double thr, double str) {
-		double lt = Math.max(-1,Math.min(thr + str,1))*0.95;
-		double rt = Math.max(-1,Math.min(thr - str,1))*0.95;
+		double lt = Math.max(-1,Math.min(thr + str,1))*0.7;
+		double rt = Math.max(-1,Math.min(thr - str,1))*0.7;
 		fl.set(lt);
 		bl.set(lt);
 		fr.set(rt);
